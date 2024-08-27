@@ -91,6 +91,7 @@ void mat_to_vecs( const double A[N][N],
 		V[i][j] = A[j][(i+j)%N];
 }
 
+// naive. not considering sparse. CMult first??
 template<int LOGQ, int LOGN, int LOGDELTA>
 void linear_transform( const double Ar[1 << (LOGN - 1)][1 << (LOGN - 1)],
 					   const double Ai[1 << (LOGN - 1)][1 << (LOGN - 1)],
